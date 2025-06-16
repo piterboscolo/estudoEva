@@ -881,74 +881,14 @@ function selectOption(selectedButton, selectedIndex) {
     if (isCorrect) {
         selectedButton.classList.add('correct');
         score++;
-        
-        // Mostra a mensagem de acerto com o botão de próxima pergunta
-        if (explanationContainer) {
-            explanationContainer.innerHTML = `
-                <div class="feedback-content">
-                    <h3 style="color: #2e7d32; margin-top: 0; text-align: center; margin-bottom: 15px;">
-                        <i class="fas fa-check-circle"></i>
-                        Parabéns! Você acertou!
-                    </h3>
-                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                        <p style="margin: 0 0 10px 0; font-weight: 500;">${questionData.explanation}</p>
-                        <p class="fun-fact" style="margin: 0; font-style: italic; color: #6c757d;">
-                            <i class="fas fa-lightbulb" style="color: #ffc107;"></i> ${questionData.funFact}
-                        </p>
-                    </div>
-                    <button id="nextQuestionBtn" class="next-btn" style="width: 100%;">
-                        Próxima Pergunta <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            `;
-            explanationContainer.style.display = 'block';
-            
-            // Adiciona o event listener ao botão de próxima pergunta
-            const nextBtn = document.getElementById('nextQuestionBtn');
-            if (nextBtn) {
-                nextBtn.addEventListener('click', nextQuestion);
-                // Garante que o botão esteja visível
-                nextBtn.scrollIntoView({ behavior: 'smooth', block: 'end' });
-            }
-        }
     } else {
         selectedButton.classList.add('incorrect');
-        // Mostra a resposta correta
-        buttons[questionData.correct].classList.add('correct');
-        
-        // Mostra o feedback completo para respostas erradas
-        if (explanationContainer) {
-            explanationContainer.innerHTML = `
-                <div class="feedback-content">
-                    <h3 style="color: #c62828; margin-top: 0; text-align: center; margin-bottom: 15px;">
-                        <i class="fas fa-times-circle"></i>
-                        Resposta Incorreta
-                    </h3>
-                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                        <p style="margin: 0 0 10px 0; font-weight: 500;">${questionData.explanation}</p>
-                        <p class="fun-fact" style="margin: 0; font-style: italic; color: #6c757d;">
-                            <i class="fas fa-lightbulb" style="color: #ffc107;"></i> ${questionData.funFact}
-                        </p>
-                    </div>
-                    <button id="nextQuestionBtn" class="next-btn" style="width: 100%; margin-top: 10px;">
-                        Próxima Pergunta <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            `;
-            explanationContainer.style.display = 'block';
-            
-            // Adiciona o event listener ao botão de próxima pergunta
-            const nextBtn = document.getElementById('nextQuestionBtn');
-            if (nextBtn) {
-                nextBtn.addEventListener('click', nextQuestion);
-            }
-        }
-        
-        // Rola suavemente até o final da pergunta
-        if (explanationContainer) {
-            explanationContainer.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        }
     }
+    
+    // Avança automaticamente para a próxima pergunta após um breve atraso
+    setTimeout(() => {
+        nextQuestion();
+    }, 500);
 }
 
 // Vai para a próxima pergunta ou mostra o resultado
