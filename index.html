@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada de Estudos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <!-- Tela Inicial -->
+        <div id="startScreen">
+            <header class="header-animation">
+                <div class="header-content">
+                    <h1><i class="fas fa-star"></i> Jornada de Estudos <i class="fas fa-star"></i></h1>
+                    <p class="subtitle">Eva! Hora da revisão. Bons Estudos! <i class="fas fa-pencil-alt"></i></p>
+                </div>
+            </header>
+        </div>
+
+        <!-- Tela do Quiz -->
+        <div id="quizContainer" style="display: none;">
+            <div class="quiz-header">
+                <div class="quiz-header-top">
+                    <button id="closeQuizBtn" class="quiz-nav-btn" title="Fechar Quiz">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="question-counter">
+                        <span id="questionNumber">1</span> / <span id="totalQuestions">10</span>
+                    </div>
+                    <button id="restartQuizBtn" class="quiz-nav-btn" title="Recomeçar Quiz">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+                <h2 id="quizTitle">Quiz</h2>
+            </div>
+            
+            <div class="quiz-content">
+                <p id="questionText"></p>
+                <div id="optionsContainer" class="options-container"></div>
+                
+                <div id="explanationContainer" style="margin-top: 20px; display: none;">
+                    <div class="explanation-box">
+                        <h4>Explicação:</h4>
+                        <p id="explanationText"></p>
+                        <p class="fun-fact" id="funFactText"></p>
+                    </div>
+                </div>
+                
+                <button id="nextButton" class="next-btn" style="display: none; margin-top: 20px;">
+                    Próxima Pergunta <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Tela de Resultados -->
+        <div id="resultContainer" style="display: none; text-align: center; color: white;">
+            <h2>Quiz Concluído!</h2>
+            <div class="score-display">
+                <p>Sua pontuação:</p>
+                <div class="score-circle">
+                    <span id="score">0/0</span>
+                </div>
+            </div>
+            <p id="resultMessage" style="margin: 20px 0;"></p>
+            <div class="result-buttons">
+                <button id="homeButton" class="result-button" style="background-color: #3498db;">
+                    <i class="fas fa-home"></i> Início
+                </button>
+                <button id="restartButton" class="result-button" style="background-color: #2ecc71;">
+                    <i class="fas fa-redo"></i> Jogar Novamente
+                </button>
+                <button id="chooseQuizButton" class="result-button" style="background-color: #f39c12;">
+                    <i class="fas fa-list"></i> Escolher Outro Quiz
+                </button>
+            </div>
+        </div>
+
+        <div class="game-intro">
+            <p>Escolha um dos quizzes abaixo e divirta-se aprendendo!</p>
+        </div>
+
+        <div class="game-board">
+            <div class="path" id="historia-quiz">
+                <div class="path-header" style="background: linear-gradient(135deg, #4CAF50, #2E7D32);">
+                    <i class="fas fa-landmark"></i>
+                    <h3>História do Brasil</h3>
+                </div>
+                <div class="path-content">
+                    <p>Renascimento Cultural e Reforma Religiosa!</p>
+                    <button class="start-btn" data-path="historia">
+                        <i class="fas fa-play"></i> Jogar
+                    </button>
+                </div>
+            </div>
+
+            <div class="path" id="ciencias-quiz">
+                <div class="path-header" style="background: linear-gradient(135deg, #2196F3, #1565C0);">
+                    <i class="fas fa-flask"></i>
+                    <h3>Ciências</h3>
+                </div>
+                <div class="path-content">
+                    <p>Explore o incrível mundo da ciência!</p>
+                    <button class="start-btn" data-path="ciencias" disabled>
+                        <i class="fas fa-lock"></i> Em breve
+                    </button>
+                </div>
+            </div>
+
+            <div class="path" id="portugues-quiz">
+                <div class="path-header" style="background: linear-gradient(135deg, #9C27B0, #6A1B9A);">
+                    <i class="fas fa-book"></i>
+                    <h3>Português</h3>
+                </div>
+                <div class="path-content">
+                    <p>Aventuras no mundo das palavras!</p>
+                    <button class="start-btn" data-path="portugues" disabled>
+                        <i class="fas fa-lock"></i> Em breve
+                    </button>
+                </div>
+            </div>
+
+            <div class="path" id="geografia-quiz">
+                <div class="path-header" style="background: linear-gradient(135deg, #FF9800, #EF6C00);">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Geografia</h3>
+                </div>
+                <div class="path-content">
+                    <p>Conheça nosso planeta incrível!</p>
+                    <button class="start-btn" data-path="geografia" disabled>
+                        <i class="fas fa-lock"></i> Em breve
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Os modais foram movidos para a estrutura principal do quiz -->
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
