@@ -860,8 +860,24 @@ function showQuestion() {
         if (restartBtn) restartBtn.addEventListener('click', restartCurrentQuiz);
     }
     
-    // Adiciona as opções de resposta
-    questionData.options.forEach((option, index) => {
+    // Garante que a resposta correta esteja entre as 4 primeiras opções
+    let optionsToShow = [...questionData.options];
+    let correctIndex = questionData.correct;
+    
+    // Se a resposta correta estiver além da 4ª posição, troca com a última posição mostrada
+    if (correctIndex >= 4) {
+        // Salva a opção que será movida
+        const temp = optionsToShow[3];
+        // Move a resposta correta para a posição 3 (4ª opção)
+        optionsToShow[3] = optionsToShow[correctIndex];
+        // Move a opção que estava na posição 3 para a posição original da resposta correta
+        optionsToShow[correctIndex] = temp;
+        // Atualiza o índice da resposta correta
+        correctIndex = 3;
+    }
+    
+    // Mostra apenas as 4 primeiras opções
+    optionsToShow.slice(0, 4).forEach((option, index) => {
         const button = document.createElement('button');
         button.className = 'option-btn';
         button.innerHTML = `
@@ -871,6 +887,9 @@ function showQuestion() {
         button.onclick = () => selectOption(button, index);
         optionsContainer.appendChild(button);
     });
+    
+    // Atualiza o índice da resposta correta para o novo contexto de 4 opções
+    gameData[currentPath].questions[currentQuestionIndex].correct = correctIndex;
     
     // Rola para o topo do modal
     questionModal.scrollTo(0, 0);
@@ -886,6 +905,7 @@ function selectOption(selectedButton, selectedIndex) {
     });
 
     const questionData = gameData[currentPath].questions[currentQuestionIndex];
+    // Usa o índice atualizado da resposta correta
     const isCorrect = selectedIndex === questionData.correct;
 
     // Adiciona classe de resposta correta/incorreta
