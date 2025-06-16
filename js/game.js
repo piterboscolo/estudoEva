@@ -418,8 +418,7 @@ const gameData = {
                     "Os Beneditinos",
                     "Os Carmelitas"
                 ],
-                correct: 2,
-                
+                correct: 2
                 }
         ]
     }
