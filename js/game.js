@@ -897,47 +897,10 @@ function selectOption(selectedButton, selectedIndex) {
             correctButton.classList.add('correct');
         }
         
-        // Mostra a explicação e o botão de próxima pergunta
-        const explanationContainer = document.getElementById('explanationContainer');
-        const explanationText = document.getElementById('explanationText');
-        
-        if (explanationContainer && explanationText) {
-            // Atualiza o texto da explicação se existir
-            if (questionData.explanation) {
-                explanationText.textContent = questionData.explanation;
-            } else {
-                explanationText.textContent = 'Nenhuma explicação disponível.';
-            }
-            
-            // Mostra o container de explicação
-            explanationContainer.style.display = 'block';
-            
-            // Remove o botão antigo se existir
-            const oldNextBtn = document.getElementById('nextQuestionBtn');
-            if (oldNextBtn) {
-                oldNextBtn.remove();
-            }
-            
-            // Cria e adiciona o novo botão
-            const newNextBtn = document.createElement('button');
-            newNextBtn.id = 'nextQuestionBtn';
-            newNextBtn.className = 'next-question-btn';
-            newNextBtn.innerHTML = 'Próxima Pergunta <i class="fas fa-arrow-right"></i>';
-            newNextBtn.addEventListener('click', nextQuestion);
-            
-            // Adiciona o botão após a explicação
-            explanationContainer.querySelector('.explanation-box').appendChild(newNextBtn);
-            
-            // Rola até a explicação
-            setTimeout(() => {
-                explanationContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 100);
-        } else {
-            // Se não houver container de explicação, avança automaticamente
-            setTimeout(() => {
-                nextQuestion();
-            }, 1500);
-        }
+        // Avança automaticamente após um breve atraso
+        setTimeout(() => {
+            nextQuestion();
+        }, 1500);
     }
 }
 
