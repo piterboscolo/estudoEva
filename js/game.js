@@ -908,47 +908,43 @@ function showResults() {
     const totalQuestions = gameData[currentPath].questions.length;
     const percentage = Math.round((score / totalQuestions) * 100);
     
-    // Define o ícone e mensagem com base na pontuação
-    let resultIcon, resultMessage;
+    // Define a mensagem com base na pontuação
+    let resultMessage;
     
     if (percentage >= 90) {
-        resultIcon = '🏆';
-        resultMessage = 'Excelente! Você é um verdadeiro especialista em História do Brasil!';
+        resultMessage = '🏆 Excelente! Você é um verdadeiro especialista!';
     } else if (percentage >= 70) {
-        resultIcon = '🎉';
-        resultMessage = 'Muito bom! Continue assim e logo estará dominando todos os assuntos!';
+        resultMessage = '🎉 Muito bom! Continue assim!';
     } else if (percentage >= 50) {
-        resultIcon = '👍';
-        resultMessage = 'Bom trabalho! Com um pouco mais de estudo você vai longe!';
+        resultMessage = '👍 Bom trabalho! Com um pouco mais de estudo você vai longe!';
     } else {
-        resultIcon = '🤔';
-        resultMessage = 'Não desanime! Reveja o conteúdo e tente novamente para melhorar seu desempenho!';
+        resultMessage = '🤔 Não desanime! Reveja o conteúdo e tente novamente!';
     }
     
-    // Atualiza o conteúdo do modal de resultado
-    const resultText = `
-        <div class="result-header">
-            <span class="result-icon">${resultIcon}</span>
-            <h2>Quiz Concluído!</h2>
-        </div>
-        <div class="result-score">
-            <div class="score-circle">
-                <span class="score-percent">${percentage}%</span>
-                <div class="score-circle-fill" style="--percentage: ${percentage}%;"></div>
-            </div>
-            <p class="score-text">${score} de ${totalQuestions} acertos</p>
-        </div>
-        <div class="result-message">
-            <p>${resultMessage}</p>
-        </div>
-    `;
+    // Atualiza os elementos da tela de resultados
+    const resultContainer = document.getElementById('resultContainer');
+    const scoreElement = document.getElementById('score');
+    const resultMessageElement = document.getElementById('resultMessage');
     
-    document.getElementById('resultText').innerHTML = resultText;
-    questionModal.style.display = 'none';
-    resultModal.style.display = 'flex';
+    // Atualiza a pontuação
+    scoreElement.textContent = `${percentage}%`;
+    scoreElement.setAttribute('data-score', percentage);
     
-    // Rola para o topo do modal de resultado
-    resultModal.scrollTo(0, 0);
+    // Atualiza a mensagem
+    resultMessageElement.textContent = resultMessage;
+    
+    // Mostra o container de resultados e esconde o quiz
+    document.getElementById('quizContainer').style.display = 'none';
+    resultContainer.style.display = 'block';
+    
+    // Adiciona classes para animação do círculo de pontuação
+    const scoreCircle = document.querySelector('.score-circle');
+    if (scoreCircle) {
+        scoreCircle.style.setProperty('--percentage', `${percentage}%`);
+    }
+    
+    // Rola para o topo da página
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Close modal
