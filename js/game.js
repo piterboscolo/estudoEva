@@ -643,9 +643,14 @@ function restartCurrentQuiz() {
         explanationContainer.style.display = 'none';
     }
     
-    // Esconde o botão de próxima pergunta
+    // Configura o botão de próxima pergunta
     if (nextButton) {
         nextButton.style.display = 'none';
+        nextButton.textContent = 'Próxima Pergunta';
+        nextButton.innerHTML = 'Próxima Pergunta <i class="fas fa-arrow-right"></i>';
+        nextButton.onclick = nextQuestion;
+        // Garante que o evento de toque funcione corretamente
+        nextButton.addEventListener('touchend', nextQuestion, { passive: true });
     }
     
     // Mostra a primeira pergunta
@@ -937,23 +942,35 @@ function selectOption(selectedButton, selectedIndex) {
         selectedButton.classList.add('correct');
         score++;
         
-        // Mostra apenas a mensagem de acerto
+        // Mostra a mensagem de acerto com o botão de próxima pergunta
         if (explanationContainer) {
             explanationContainer.innerHTML = `
                 <div class="feedback-content">
-                    <h3 style="color: #2e7d32; margin-top: 0; text-align: center;">
+                    <h3 style="color: #2e7d32; margin-top: 0; text-align: center; margin-bottom: 15px;">
                         <i class="fas fa-check-circle"></i>
                         Parabéns! Você acertou!
                     </h3>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                        <p style="margin: 0 0 10px 0; font-weight: 500;">${questionData.explanation}</p>
+                        <p class="fun-fact" style="margin: 0; font-style: italic; color: #6c757d;">
+                            <i class="fas fa-lightbulb" style="color: #ffc107;"></i> ${questionData.funFact}
+                        </p>
+                    </div>
+                    <button id="nextQuestionBtn" class="next-btn" style="width: 100%;">
+                        Próxima Pergunta <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
             `;
             explanationContainer.style.display = 'block';
+            
+            // Adiciona o event listener ao botão de próxima pergunta
+            const nextBtn = document.getElementById('nextQuestionBtn');
+            if (nextBtn) {
+                nextBtn.addEventListener('click', nextQuestion);
+                // Garante que o botão esteja visível
+                nextBtn.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }
         }
-        
-        // Avança automaticamente para a próxima pergunta após 1,5 segundos
-        setTimeout(() => {
-            nextQuestion();
-        }, 1500);
     } else {
         selectedButton.classList.add('incorrect');
         // Mostra a resposta correta
@@ -989,7 +1006,7 @@ function selectOption(selectedButton, selectedIndex) {
         
         // Rola suavemente até o final da pergunta
         if (explanationContainer) {
-            explanationContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            explanationContainer.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
     }
 }

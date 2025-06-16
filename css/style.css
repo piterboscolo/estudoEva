@@ -862,15 +862,32 @@ header h1 {
     /* Ajustes para o botão de próxima pergunta */
     #nextQuestionBtn {
         width: 100%;
-        padding: 14px;
+        padding: 16px;
         background: #4CAF50;
         color: white;
         border: none;
         border-radius: 8px;
-        font-size: 1em;
+        font-size: 1.1em;
         font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        display: block;
+        margin: 15px 0 0 0;
+        max-width: 100%;
+        position: relative;
+        z-index: 1000;
+    }
+
+    #nextQuestionBtn:active {
+        background: #43A047;
+        transform: scale(0.98);
+    }
+
+    #nextQuestionBtn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
     }
 
     #nextQuestionBtn:hover {
@@ -1141,6 +1158,7 @@ header h1 {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding: 15px;
+    padding-bottom: 80px; /* Espaço para o botão fixo */
 }
 
 .quiz-content {
@@ -1156,11 +1174,13 @@ header h1 {
 .quiz-footer {
     padding: 15px 0;
     background: white;
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    margin: 0 -15px;
+    left: 0;
+    right: 0;
     padding: 15px;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
 #questionText {
