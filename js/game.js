@@ -893,7 +893,7 @@ function selectOption(selectedButton, selectedIndex) {
     // Avança automaticamente para a próxima pergunta após um breve atraso
     setTimeout(() => {
         nextQuestion();
-    }, 1000);
+    }, 2000);
 }
 
 // Vai para a próxima pergunta ou mostra o resultado
