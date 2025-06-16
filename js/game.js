@@ -881,6 +881,10 @@ function selectOption(selectedButton, selectedIndex) {
     if (isCorrect) {
         selectedButton.classList.add('correct');
         score++;
+        // Avança automaticamente para a próxima pergunta após um breve atraso
+        setTimeout(() => {
+            nextQuestion();
+        }, 1500);
     } else {
         selectedButton.classList.add('incorrect');
         // Destaca a resposta correta em verde
@@ -888,12 +892,36 @@ function selectOption(selectedButton, selectedIndex) {
         if (correctButton) {
             correctButton.classList.add('correct');
         }
+        
+        // Mostra a explicação e o botão de próxima pergunta
+        const explanationContainer = document.getElementById('explanationContainer');
+        if (explanationContainer && questionData.explanation) {
+            explanationContainer.innerHTML = `
+                <div class="explanation-box">
+                    <h4>Explicação:</h4>
+                    <p>${questionData.explanation}</p>
+                    <button id="nextQuestionBtn" class="next-question-btn">
+                        Próxima Pergunta <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            `;
+            explanationContainer.style.display = 'block';
+            
+            // Adiciona o event listener ao botão de próxima pergunta
+            const nextBtn = document.getElementById('nextQuestionBtn');
+            if (nextBtn) {
+                nextBtn.addEventListener('click', nextQuestion);
+            }
+            
+            // Rola até a explicação
+            explanationContainer.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // Se não houver explicação, avança automaticamente
+            setTimeout(() => {
+                nextQuestion();
+            }, 1500);
+        }
     }
-    
-    // Avança automaticamente para a próxima pergunta após um breve atraso
-    setTimeout(() => {
-        nextQuestion();
-    }, 2000);
 }
 
 // Vai para a próxima pergunta ou mostra o resultado
