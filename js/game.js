@@ -825,7 +825,7 @@ function showQuestion() {
     // Limpa as opções anteriores
     if (optionsContainer) optionsContainer.innerHTML = '';
     
-    // Configura o botão de próxima pergunta
+    // Configura o botão de próxima pergunta (inicialmente escondido)
     if (nextButton) {
         nextButton.style.display = 'none';
         nextButton.innerHTML = 'Próxima Pergunta <i class="fas fa-arrow-right"></i>';
@@ -903,6 +903,16 @@ function selectOption(selectedButton, selectedIndex) {
         button.disabled = true;
         button.style.pointerEvents = 'none';
     });
+    
+    // Rola para o topo do modal após um pequeno delay
+    setTimeout(() => {
+        if (questionModal) {
+            questionModal.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    }, 300);
 
     const questionData = gameData[currentPath].questions[currentQuestionIndex];
     // Usa o índice atualizado da resposta correta
