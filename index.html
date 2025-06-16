@@ -38,21 +38,25 @@
                 <h2 id="quizTitle">Quiz</h2>
             </div>
             
-            <div class="quiz-content">
-                <p id="questionText"></p>
-                <div id="optionsContainer" class="options-container"></div>
-                
-                <div id="explanationContainer" style="margin-top: 20px; display: none;">
-                    <div class="explanation-box">
-                        <h4>Explicação:</h4>
-                        <p id="explanationText"></p>
-                        <p class="fun-fact" id="funFactText"></p>
+            <div class="quiz-scroll-container">
+                <div class="quiz-content">
+                    <div class="question-wrapper">
+                        <p id="questionText"></p>
+                        <div id="optionsContainer" class="options-container"></div>
+                        
+                        <div id="explanationContainer" style="margin-top: 20px; display: none;">
+                            <div class="explanation-box">
+                                <h4>Explicação:</h4>
+                                <p id="explanationText"></p>
+                                <p class="fun-fact" id="funFactText"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-footer">
+                        <button id="nextQuestionBtn">Próxima Pergunta <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
-                
-                <button id="nextButton" class="next-btn" style="display: none; margin-top: 20px;">
-                    Próxima Pergunta <i class="fas fa-arrow-right"></i>
-                </button>
             </div>
         </div>
         

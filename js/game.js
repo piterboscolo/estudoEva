@@ -489,19 +489,19 @@ let score = 0;
 let selectedOption = null;
 
 // Elementos do DOM
+const questionModal = document.getElementById('quizContainer');
+const resultModal = document.getElementById('resultContainer');
 const questionText = document.getElementById('questionText');
 const optionsContainer = document.getElementById('optionsContainer');
-const nextButton = document.getElementById('nextButton');
 const explanationContainer = document.getElementById('explanationContainer');
+const nextButton = document.getElementById('nextQuestionBtn');
 const explanationText = document.getElementById('explanationText');
 const funFactText = document.getElementById('funFactText');
 const scoreElement = document.getElementById('score');
 const resultMessage = document.getElementById('resultMessage');
-const questionModal = document.getElementById('quizContainer'); 
-const resultModal = document.getElementById('resultContainer');   
-const restartButton = document.getElementById('restartButton');
 const questionNumber = document.getElementById('questionNumber');
 const totalQuestions = document.getElementById('totalQuestions');
+const restartButton = document.getElementById('restartButton');
 
 // Inicia o quiz
 function startQuiz(quizType = 'historia') {
