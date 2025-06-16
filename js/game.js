@@ -883,6 +883,11 @@ function selectOption(selectedButton, selectedIndex) {
         score++;
     } else {
         selectedButton.classList.add('incorrect');
+        // Destaca a resposta correta em verde
+        const correctButton = document.querySelectorAll('.option-btn')[questionData.correct];
+        if (correctButton) {
+            correctButton.classList.add('correct');
+        }
     }
     
     // Avança automaticamente para a próxima pergunta após um breve atraso
