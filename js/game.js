@@ -808,6 +808,11 @@ function showResults() {
 function showQuestion() {
     const questionData = gameData[currentPath].questions[currentQuestionIndex];
     
+    // Rola para o topo quando uma nova pergunta é carregada
+    if (questionModal) {
+        questionModal.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
     // Atualiza o contador de perguntas no cabeçalho
     updateQuestionCounter();
     
@@ -907,12 +912,21 @@ function selectOption(selectedButton, selectedIndex) {
     // Rola para o topo do modal após um pequeno delay
     setTimeout(() => {
         if (questionModal) {
-            questionModal.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            // Usa scrollIntoView para melhor compatibilidade com dispositivos móveis
+            const header = document.querySelector('.quiz-header');
+            if (header) {
+                header.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            } else {
+                questionModal.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
         }
-    }, 300);
+    }, 100);
 
     const questionData = gameData[currentPath].questions[currentQuestionIndex];
     // Usa o índice atualizado da resposta correta

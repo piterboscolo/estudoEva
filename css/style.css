@@ -806,19 +806,112 @@ header h1 {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    /* Ajustes gerais */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Ajustes para o modal */
+    .modal {
+        padding: 10px;
+    }
+    
     .modal-content {
-        width: 95%;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
         padding: 15px;
     }
     
+    /* Ajustes para o cabeçalho do quiz */
+    .quiz-header {
+        position: sticky;
+        top: 0;
+        background: white;
+        padding: 10px 0;
+        z-index: 10;
+        margin: -15px -15px 15px -15px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    /* Ajustes para as questões */
+    #questionText {
+        font-size: 1.1em;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+    
+    /* Ajustes para os botões de opção */
+    .option-btn {
+        padding: 12px 10px;
+        font-size: 0.95em;
+        white-space: normal;
+        text-align: left;
+        line-height: 1.4;
+    }
+    
+    /* Ajustes para o contêiner de opções */
+    .options-container {
+        gap: 8px;
+    }
+    
+    /* Ajustes para o botão de próxima pergunta */
+    #nextQuestionBtn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+    }
+    
+    /* Ajustes para a explicação */
+    .explanation-box {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+    
+    /* Ajustes para o resultado */
     .result-score {
         width: 120px;
         height: 120px;
+        margin: 15px auto;
     }
     
     .score-percent {
         font-size: 1.6em;
+    }
+    
+    /* Ajustes para o cabeçalho */
+    .header-content h1 {
+        font-size: 1.8em;
+    }
+    
+    .header-content p {
+        font-size: 1em;
+    }
+    
+    /* Ajustes para os cards de categoria */
+    .path {
+        margin-bottom: 15px;
+    }
+    
+    .path-header {
+        padding: 12px;
+    }
+    
+    .path-header h3 {
+        font-size: 1.1em;
+    }
+    
+    .path-content p {
+        font-size: 0.9em;
+    }
+    
+    .start-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
     }
 }
 
@@ -968,18 +1061,23 @@ header h1 {
     border-bottom: 2px solid #f0f0f0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .game-board {
-        grid-template-columns: 1fr;
+/* Estilos para telas muito pequenas (menos de 400px) */
+@media (max-width: 400px) {
+    body {
+        font-size: 13px;
     }
     
-    header h1 {
-        font-size: 2rem;
+    .header-content h1 {
+        font-size: 1.6em;
     }
     
-    .path-header h2 {
-        font-size: 1.3rem;
+    #questionText {
+        font-size: 1em;
+    }
+    
+    .option-btn {
+        padding: 10px 8px;
+        font-size: 0.9em;
     }
 }
 
