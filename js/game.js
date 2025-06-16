@@ -14,8 +14,7 @@ const gameData = {
                     "Tradição oral como principal meio de transmissão de conhecimento"
                 ],
                 correct: 2,
-                explanation: "O Renascimento valorizou o antropocentrismo, colocando o ser humano como centro das atenções e dos estudos, em oposição ao teocentrismo medieval.",
-                funFact: "O termo 'Carpe Diem', usado pelos renascentistas, significa 'Aproveite o dia' em latim."
+                
             },
             {
                 question: "Qual fator contribuiu significativamente para a difusão das ideias renascentistas?",
@@ -27,8 +26,7 @@ const gameData = {
                     "Expansão dos feudos"
                 ],
                 correct: 1,
-                explanation: "A imprensa, criada por Gutenberg, permitiu a divulgação em massa das ideias renascentistas.",
-                funFact: "A Bíblia foi um dos primeiros livros impressos com os tipos móveis de Gutenberg."
+                
             },
             {
                 question: "O que caracterizava o Classicismo no Renascimento?",
@@ -40,8 +38,7 @@ const gameData = {
                     "Isolamento cultural das cidades italianas"
                 ],
                 correct: 2,
-                explanation: "O Classicismo foi marcado pela valorização dos modelos greco-romanos da Antiguidade.",
-                funFact: "Muitos artistas renascentistas buscavam inspiração em ruínas romanas."
+                
             },
             {
                 question: "Qual cidade italiana é considerada o berço do Renascimento?",
@@ -53,8 +50,7 @@ const gameData = {
                     "Nápoles"
                 ],
                 correct: 3,
-                explanation: "Florença foi um dos principais centros culturais e artísticos do Renascimento, apoiado por famílias como os Médici.",
-                funFact: "A família Médici foi uma das grandes patrocinadoras das artes em Florença."
+                
             },
             {
                 question: "O que foi o mecenato durante o Renascimento?",
@@ -66,8 +62,7 @@ const gameData = {
                     "Tipo de governo republicano"
                 ],
                 correct: 2,
-                explanation: "O mecenato consistia no financiamento da arte e da ciência por nobres, comerciantes e pela Igreja.",
-                funFact: "Leonardo da Vinci teve apoio de mecenas para criar suas obras."
+                
             },
             {
                 question: "Qual dessas obras é de William Shakespeare, escritor do Renascimento?",
@@ -79,8 +74,7 @@ const gameData = {
                     "Macunaíma"
                 ],
                 correct: 2,
-                explanation: "Shakespeare foi um dos maiores escritores do Renascimento inglês, e 'Romeu e Julieta' é uma de suas obras mais conhecidas.",
-                funFact: "Shakespeare é considerado o maior dramaturgo da língua inglesa."
+                
             },
             {
                 question: "Qual avanço científico é associado ao Renascimento?",
@@ -92,8 +86,7 @@ const gameData = {
                     "Alquimia medieval"
                 ],
                 correct: 1,
-                explanation: "O método científico foi desenvolvido no Renascimento, baseando-se na observação e experimentação.",
-                funFact: "Galileu Galilei foi um dos grandes defensores do método científico."
+                
             },
             {
                 question: "Qual foi a importância da astronomia no Renascimento?",
@@ -105,8 +98,7 @@ const gameData = {
                     "Divulgar o calendário lunar"
                 ],
                 correct: 2,
-                explanation: "A teoria heliocêntrica, defendida por Copérnico e Galileu, foi um marco do pensamento científico moderno.",
-                funFact: "Galileu foi perseguido pela Inquisição por defender o heliocentrismo."
+                
             },
             {
                 question: "Qual pensador renascentista escreveu 'O Príncipe', obra política de grande influência?",
@@ -118,8 +110,7 @@ const gameData = {
                     "Dante Alighieri"
                 ],
                 correct: 0,
-                explanation: "Maquiavel escreveu 'O Príncipe', defendendo a centralização do poder político.",
-                funFact: "A obra de Maquiavel é até hoje referência em ciência política."
+                
             },
             {
                 question: "Como o Renascimento contribuiu para a Reforma Religiosa?",
@@ -131,8 +122,7 @@ const gameData = {
                     "Tornando o latim obrigatório nos cultos"
                 ],
                 correct: 2,
-                explanation: "O racionalismo renascentista questionou as verdades absolutas da Igreja, preparando o terreno para a Reforma.",
-                funFact: "A liberdade de pensamento defendida pelos humanistas influenciou Lutero e outros reformadores."
+                
             },
 
             // Reforma Protestante
@@ -140,71 +130,61 @@ const gameData = {
                 question: "Quem foi o principal iniciador da Reforma Protestante em 1517?",
                 options: ["João Calvino", "Henrique VIII", "Martinho Lutero", "Tomás de Aquino", "Papa Leão X"],
                 correct: 2,
-                explanation: "Martinho Lutero iniciou a Reforma Protestante ao publicar suas 95 Teses criticando a Igreja Católica.",
-                funFact: "Lutero afixou suas teses na porta da Igreja de Wittenberg, na Alemanha."
+                
             },
             {
                 question: "Qual prática da Igreja Católica foi duramente criticada por Lutero?",
                 options: ["Celebração da missa", "Confissão", "Venda de indulgências", "Batismo de crianças", "Uso de latim nas pregações"],
                 correct: 2,
-                explanation: "Lutero se opôs principalmente à venda de indulgências, que prometia perdão dos pecados em troca de dinheiro.",
-                funFact: "As indulgências eram usadas para financiar a construção da Basílica de São Pedro, em Roma."
+                
             },
             {
                 question: "Qual documento marca o início oficial da Reforma Protestante?",
                 options: ["Os Lusíadas", "A Bíblia em alemão", "95 Teses", "Contrato de Worms", "Concílio de Trento"],
                 correct: 2,
-                explanation: "As 95 Teses de Lutero denunciaram abusos da Igreja e deram início à Reforma em 1517.",
-                funFact: "As teses foram escritas em latim e rapidamente traduzidas para o alemão e impressas."
+                
             },
             {
                 question: "Qual líder reformista defendeu a doutrina da predestinação?",
                 options: ["Lutero", "Calvino", "Henrique VIII", "Erasmo de Roterdã", "Giordano Bruno"],
                 correct: 1,
-                explanation: "João Calvino afirmava que Deus já havia escolhido quem seria salvo ou condenado.",
-                funFact: "Calvino atuou principalmente em Genebra, na Suíça."
+                
             },
             {
                 question: "Qual igreja nacional foi criada por Henrique VIII na Inglaterra?",
                 options: ["Igreja Ortodoxa", "Igreja Anglicana", "Igreja Batista", "Igreja Presbiteriana", "Igreja Reformada"],
                 correct: 1,
-                explanation: "Henrique VIII criou a Igreja Anglicana após ter seu pedido de divórcio negado pelo papa.",
-                funFact: "A separação entre Igreja e Estado começou a se delinear com a Igreja Anglicana."
+                
             },
             {
                 question: "O que foi a Contrarreforma?",
                 options: ["A separação entre Igreja e Estado", "Movimento protestante da Inglaterra", "Reforma da Igreja Católica em resposta à Reforma Protestante", "Reforma filosófica da Renascença", "Expansão do luteranismo na França"],
                 correct: 2,
-                explanation: "A Contrarreforma foi a reação da Igreja Católica à Reforma Protestante, buscando conter seu avanço.",
-                funFact: "O Concílio de Trento (1545) foi um dos principais marcos da Contrarreforma."
+                
             },
             {
                 question: "Qual foi o principal objetivo do Concílio de Trento?",
                 options: ["Reconhecer a fé protestante", "Reformar abusos e reafirmar dogmas católicos", "Separar o Estado da Igreja", "Excomungar os reis hereges", "Criar novas ordens religiosas"],
                 correct: 1,
-                explanation: "O Concílio de Trento buscou reafirmar os dogmas católicos e corrigir práticas criticadas pelos reformadores.",
-                funFact: "Foi nesse concílio que foram criados os seminários para formação de padres."
+                
             },
             {
                 question: "Quais os principais pilares do luteranismo?",
                 options: ["Obediência ao papa e venda de indulgências", "Salvação pelas obras e culto aos santos", "Salvação pela fé, fim do celibato, fim das indulgências", "Uso do latim e construção de catedrais", "Criação de novas dioceses"],
                 correct: 2,
-                explanation: "O luteranismo baseia-se na fé como única forma de salvação, na leitura direta da Bíblia e fim das indulgências e celibato.",
-                funFact: "Lutero era monge católico antes de romper com a Igreja."
+                
             },
             {
                 question: "O que foi o Tribunal da Inquisição, reativado na Contrarreforma?",
                 options: ["Órgão militar para caçar protestantes", "Tribunal da Igreja para punir heresias", "Sistema de impostos sobre livros", "Corte criada por Lutero", "Reunião política de reis absolutistas"],
                 correct: 1,
-                explanation: "A Inquisição foi um tribunal eclesiástico que perseguia e punia aqueles considerados hereges.",
-                funFact: "Giordano Bruno foi queimado vivo pela Inquisição por defender ideias científicas e filosóficas."
+                
             },
             {
                 question: "Quais foram as principais causas da Reforma Protestante?",
                 options: ["Expansão da fé islâmica", "Corrupção da Igreja Católica e influência do Renascimento", "Fim do Império Romano e peste negra", "Criação da imprensa e invasão muçulmana", "Divisão da Igreja Ortodoxa"],
                 correct: 1,
-                explanation: "A Reforma foi causada pela insatisfação com os abusos da Igreja e pelas ideias humanistas do Renascimento.",
-                funFact: "Erasmo de Roterdã criticava a Igreja, mas nunca se uniu aos reformadores."
+                
             },
 
             // Grandes Navegações, Centralização do Poder e Ascensão da Burguesia
@@ -218,9 +198,7 @@ const gameData = {
                     "A superpopulação na Europa que exigia novas terras"
                 ],
                 correct: 2,
-                explanation: "As Grandes Navegações foram impulsionadas principalmente pela busca de metais preciosos e novas rotas comerciais para o Oriente, já que a rota terrestre estava sob controle dos muçulmanos. A necessidade de contornar os intermediários no comércio de especiarias foi um fator crucial.",
-                funFact: "O Tratado de Tordesilhas (1494) dividiu o mundo em áreas de influência entre Portugal e Espanha, mostrando como o poder estava se centralizando nas mãos das monarquias ibéricas."
-            },
+                },
             {
                 question: "Como a ascensão da burguesia se relacionou com a centralização do poder na Europa Moderna?",
                 options: [
@@ -231,9 +209,7 @@ const gameData = {
                     "A burguesia defendia o retorno ao sistema feudal"
                 ],
                 correct: 1,
-                explanation: "A burguesia, classe social que enriquecia com o comércio, aliou-se aos reis contra os senhores feudais. Em troca de apoio financeiro e administrativo, os reis concediam privilégios comerciais e cargos públicos à burguesia, fortalecendo o poder real e enfraquecendo a nobreza feudal.",
-                funFact: "Muitas das primeiras companhias de comércio, como a Companhia das Índias Orientais, foram criadas com capital da burguesia e apoio real, mostrando essa aliança entre o poder central e a nova classe mercantil."
-            },
+                },
 
             // Humanismo e Renascimento
             {
@@ -246,9 +222,7 @@ const gameData = {
                     "Palermo"
                 ],
                 correct: 4,
-                explanation: "Enquanto Florença, Veneza, Milão e Nápoles foram importantes centros renascentistas, Palermo, na Sicília, não teve o mesmo destaque nesse movimento cultural. Florença, em particular, é considerada o berço do Renascimento.",
-                funFact: "Florença, sob o governo da família Médici, tornou-se o principal centro artístico e intelectual da Europa no século XV, atraindo mentes brilhantes como Leonardo da Vinci e Michelangelo."
-            },
+                 },
             {
                 question: "Qual das seguintes características NÃO é uma marca da produção artística renascentista?",
                 options: [
@@ -259,9 +233,7 @@ const gameData = {
                     "Estudo da anatomia humana"
                 ],
                 correct: 3,
-                explanation: "O uso de ouro e cores planas é característico da arte medieval, não do Renascimento. Os artistas renascentistas buscavam realismo, profundidade e representação fiel da natureza, usando técnicas como a perspectiva linear e o estudo da anatomia.",
-                funFact: "Leonardo da Vinci dissecava cadáveres para entender melhor a anatomia humana, o que permitiu que suas pinturas tivessem uma representação extremamente precisa do corpo."
-            },
+                 },
             {
                 question: "Qual desses escritores é considerado um dos principais representantes da literatura renascentista?",
                 options: [
@@ -272,9 +244,7 @@ const gameData = {
                     "São Tomás de Aquino"
                 ],
                 correct: 1,
-                explanation: "William Shakespeare, embora inglês, é considerado um dos maiores expoentes da literatura renascentista. Suas obras refletem os ideais humanistas do período, com foco no ser humano e em suas paixões. As outras opções são de períodos anteriores (Dante, Chaucer) ou não são conhecidos principalmente como literatos (Santo Agostinho, São Tomás).",
-                funFact: "Shakespeare cunhou mais de 1.700 palavras em inglês que ainda usamos hoje, como 'eyeball' (globo ocular) e 'fashionable' (na moda)."
-            },
+                  },
             {
                 question: "Qual foi uma das principais contribuições do Renascimento Científico?",
                 options: [
@@ -285,9 +255,7 @@ const gameData = {
                     "A proibição das dissecações humanas"
                 ],
                 correct: 2,
-                explanation: "O Renascimento Científico trouxe uma nova abordagem ao conhecimento, valorizando a observação direta da natureza e a experimentação, em contraste com o método escolástico medieval que se baseava principalmente na autoridade de textos antigos. Figuras como Galileu Galilei desafiaram o conhecimento estabelecido através da observação empírica.",
-                funFact: "Andreas Vesalius, considerado o pai da anatomia moderna, publicou em 1543 'De humani corporis fabrica', um tratado revolucionário baseado em dissecações humanas que corrigiu muitos erros da anatomia de Galeno."
-            },
+                    },
             {
                 question: "Qual das seguintes obras é considerada um marco do pensamento humanista do Renascimento?",
                 options: [
@@ -298,9 +266,7 @@ const gameData = {
                     "A Canção de Rolando"
                 ],
                 correct: 1,
-                explanation: "'O Príncipe', de Nicolau Maquiavel, é uma obra fundamental do pensamento político renascentista que reflete os valores humanistas ao analisar o poder político de forma realista e secular, separando a política da moral religiosa.",
-                funFact: "O termo 'maquiavélico', derivado do nome de Maquiavel, é frequentemente usado para descrever ações políticas astutas e sem escrúpulos, embora isso represente uma simplificação exagerada de seu pensamento."
-            },
+                  },
             {
                 question: "Qual inovação técnica foi fundamental para a difusão das ideias renascentistas?",
                 options: [
@@ -311,9 +277,7 @@ const gameData = {
                     "O relógio mecânico"
                 ],
                 correct: 2,
-                explanation: "A invenção da imprensa de tipos móveis por Johann Gutenberg por volta de 1450 revolucionou a produção de livros, tornando-os mais acessíveis e baratos. Isso permitiu a rápida difusão das ideias humanistas e científicas do Renascimento por toda a Europa.",
-                funFact: "Antes da imprensa, copiar um livro à mão podia levar meses. Com a imprensa, centenas de cópias podiam ser produzidas em questão de dias."
-            },
+                  },
             {
                 question: "Qual desses elementos caracteriza a arquitetura renascentista?",
                 options: [
@@ -324,9 +288,7 @@ const gameData = {
                     "Paredes grossas com poucas aberturas"
                 ],
                 correct: 1,
-                explanation: "A arquitetura renascentista buscava a harmonia e a proporção baseadas nos modelos da Antiguidade Clássica, com formas geométricas puras, simetria e elementos como colunas, frontões e cúpulas. Isso contrastava com o estilo gótico anterior, caracterizado por arcos ogivais e vitrais coloridos.",
-                funFact: "A cúpula da Catedral de Santa Maria del Fiore, em Florença, projetada por Filippo Brunelleschi, é considerada uma das maiores realizações da arquitetura renascentista e foi a maior cúpula do mundo quando construída."
-            },
+                  },
             {
                 question: "Qual foi o papel dos mecenas no Renascimento?",
                 options: [
@@ -337,9 +299,7 @@ const gameData = {
                     "Eram cientistas que desenvolviam novas teorias"
                 ],
                 correct: 2,
-                explanation: "Os mecenas eram indivíduos ricos, como os Médici em Florença, que patrocinavam artistas, escritores e cientistas, fornecendo-lhes recursos para criar suas obras. Esse mecenato foi essencial para o desenvolvimento das artes e das ciências durante o Renascimento.",
-                funFact: "Lorenzo de' Medici, conhecido como 'o Magnífico', foi um dos mais famosos mecenas do Renascimento, tendo patrocinado artistas como Botticelli, Michelangelo e Leonardo da Vinci em seus primeiros anos."
-            },
+                  },
 
             // Apoio a Lutero e Base do Luteranismo
             {
@@ -352,9 +312,7 @@ const gameData = {
                     "Maximiliano I da Baviera"
                 ],
                 correct: 0,
-                explanation: "Frederico III, conhecido como Frederico, o Sábio, foi o príncipe-eleitor da Saxônia que protegeu Lutero, permitindo que ele traduzisse a Bíblia para o alemão e consolidasse suas ideias.",
-                funFact: "Durante seu tempo no Castelo de Wartburg, Lutero se disfarçou de 'Cavaleiro Jorge' para evitar ser reconhecido."
-            },
+                  },
             {
                 question: "Qual das alternativas NÃO é um princípio fundamental do Luteranismo?",
                 options: [
@@ -365,9 +323,7 @@ const gameData = {
                     "A negação da autoridade papal"
                 ],
                 correct: 3,
-                explanation: "A veneração de relíquias sagradas foi uma prática criticada por Lutero, que a via como uma forma de superstição e comércio religioso. Os princípios fundamentais do Luteranismo incluem a salvação pela fé, o sacerdócio universal e a autoridade das Escrituras.",
-                funFact: "Lutero queimou publicamente a bula papal que o ameaçava de excomunhão, mostrando sua rejeição à autoridade papal."
-            },
+                 },
 
             // Anabatismo
             {
@@ -380,9 +336,7 @@ const gameData = {
                     "Comunhão de bens em algumas comunidades"
                 ],
                 correct: 3,
-                explanation: "Os anabatistas acreditavam na separação entre Igreja e Estado e geralmente se recusavam a participar de cargos políticos ou militares, preferindo viver em comunidades separadas. Eles não buscavam o poder político nas cidades.",
-                funFact: "O termo 'anabatista' significa 'batizar novamente', já que eles rejeitavam o batismo infantil e rebatizavam os convertidos adultos."
-            },
+                },
             {
                 question: "Qual líder anabatista liderou a revolta de Münster (1534-1535), estabelecendo uma teocracia radical na cidade?",
                 options: [
@@ -393,9 +347,7 @@ const gameData = {
                     "João Calvino"
                 ],
                 correct: 2,
-                explanation: "Jan Matthys foi um dos líderes anabatistas radicais que tomou o controle de Münster, estabelecendo uma teocracia com práticas extremas como a poligamia. O movimento foi brutalmente reprimido após um cerco à cidade.",
-                funFact: "Após a queda de Münster, os anabatistas moderados, sob a liderança de Menno Simons, formaram os menonitas, conhecidos por seu pacifismo e vida comunitária simples."
-            },
+                   },
 
             // Calvinismo
             {
@@ -408,9 +360,7 @@ const gameData = {
                     "Purgatório"
                 ],
                 correct: 1,
-                explanation: "A predestinação é um conceito central no Calvinismo, que afirma que Deus já escolheu quem será salvo (os eleitos) e quem será condenado, independentemente das obras ou méritos humanos.",
-                funFact: "A cidade de Genebra, sob a influência de Calvino, tornou-se um importante centro do Protestantismo e foi chamada de 'Roma Protestante'."
-            },
+                 },
             {
                 question: "Qual das seguintes práticas foi característica das comunidades calvinistas?",
                 options: [
@@ -421,9 +371,7 @@ const gameData = {
                     "Veneração de santos"
                 ],
                 correct: 2,
-                explanation: "Os calvinistas adotavam uma abordagem simples e austera na adoração, removendo imagens religiosas e decorações das igrejas, e enfatizando a pregação e o estudo das Escrituras.",
-                funFact: "Muitas igrejas calvinistas tinham púlpitos no centro da nave, refletindo a importância dada à pregação da Palavra."
-            },
+                 },
 
             // Anglicanismo
             {
@@ -436,9 +384,7 @@ const gameData = {
                     "A corrupção do clero inglês"
                 ],
                 correct: 1,
-                explanation: "Henrique VIII rompeu com a Igreja Católica principalmente porque o Papa se recusou a anular seu casamento com Catarina de Aragão, que não lhe dera um herdeiro homem. Ele queria se casar com Ana Bolena na esperança de ter um filho homem.",
-                funFact: "Apesar do rompimento com Roma, Henrique VIII manteve muitas práticas católicas e se autoproclamou 'Defensor da Fé' pelo Papa antes da ruptura."
-            },
+                 },
             {
                 question: "Em qual importante cidade mercantil da Europa do século XV a família Arnolfini, retratada no famoso quadro de Jan van Eyck, prosperou como mercadores de tecidos?",
                 options: [
@@ -449,9 +395,7 @@ const gameData = {
                     "Lyon, na França"
                 ],
                 correct: 0,
-                explanation: "A família Arnolfini, imigrantes italianos, prosperou como mercadores de tecidos em Bruges, uma das principais cidades do comércio europeu no século XV. O famoso retrato de Jan van Eyck mostra o casal Arnolfini em sua casa, refletindo a riqueza e o status social da burguesia mercantil da época.",
-                funFact: "Bruges era um importante centro comercial do norte da Europa, conhecida como 'Veneza do Norte' por seus canais, e abrigava uma grande colônia de mercadores estrangeiros, incluindo muitos italianos como os Arnolfini."
-            },
+               },
 
             // Contrarreforma
             {
@@ -464,9 +408,7 @@ const gameData = {
                     "Promover a venda de indulgências"
                 ],
                 correct: 1,
-                explanation: "O Concílio de Trento teve como principais objetivos reafirmar os dogmas católicos que haviam sido questionados pelos protestantes (como os sete sacramentos e a transubstanciação) e combater os abusos do clero, como a simonia e o nicolaísmo.",
-                funFact: "O Concílio de Trento durou 18 anos, com interrupções, e estabeleceu as bases do Catolicismo moderno."
-            },
+                   },
             {
                 question: "Qual ordem religiosa foi fundada por Inácio de Loyola em 1540 e se tornou uma das principais forças da Contrarreforma?",
                 options: [
@@ -477,9 +419,7 @@ const gameData = {
                     "Os Carmelitas"
                 ],
                 correct: 2,
-                explanation: "A Companhia de Jesus, fundada por Inácio de Loyola, tornou-se uma das principais forças da Contrarreforma, com seus membros atuando como missionários, educadores e conselheiros de governantes católicos.",
-                funFact: "Os jesuítas ficaram conhecidos como 'a cavalaria do Papa' por seu voto de obediência direta ao pontífice e seu papel na defesa e expansão do Catolicismo."
-            }
+                }
         ]
     }
 };
